@@ -1,0 +1,151 @@
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <title>Calculator</title>
+    <style type="text/css">
+        #calculator * {
+            font-size: 16px;
+        }
+        
+        #calculator table {
+            align-content: center;
+            border: solid 4px rgb(12, 4, 4);
+            border-spacing: 15px;
+            border-radius: 10%;
+            background-color: rgb(39, 39, 37);
+        }
+        
+        #calculator table td {
+            border-spacing: 400px;
+        }
+        
+        input.display {
+            width: 253px;
+            height: 30px;
+            text-align: right;
+            border-width: 3px;
+            border-color: rgb(7, 6, 5);
+        }
+
+        body {
+	        background-image: url(https://i.gifer.com/4Cb2.gif);
+	        background-repeat: no-repeat;
+	        background-size: 36%;
+	        background-attachment: local;
+	        font-family: "Comic Sans MS";
+            background-position: top;
+            background-color: black;
+        
+    
+        }   
+        
+        .buttons {
+            border-top: solid 2px rgba(233, 145, 13, 0.822);
+            
+        }
+
+        .but:hover{
+            transform: scale(1.05);
+            background-color: rgb(243, 210, 26);
+        }
+        
+        input[type=button] {
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+            border-width: 3px;
+            border-color: rgb(8, 7, 7);
+            border-style: solid;
+            background-color: rgb(250, 167, 42);
+            
+        }
+
+        .input:hover{
+            color:chartreuse;
+        }
+        
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        .background {
+            height: 50cm;
+        }
+    </style>
+</head>
+
+<body style>
+   <script>
+      function sub3cf()
+        {
+         calc.input.value= calc.input.value*9/5+32
+        }
+        function sub3fc()
+        {
+         calc.input.value= (calc.input.value-32)*5/9
+        }
+        function sub4goz(params) {
+            calc.input.value = (calc.input.value/28.35)
+        }
+        function sub4ozg(params) {
+            calc.input.value = (calc.input.value*28.35)
+        }
+        function sub4cmi(params) {
+            calc.input.value = (calc.input.value*2.54)
+        }
+        function sub4icm(params) {
+            calc.input.value = (calc.input.value*2.54)
+        }
+ 
+      </script>
+    <div class="background">
+    <form name="calc" id="calculator">
+        <table class="center">
+            <tr>
+                <td>
+                    <input type="text" name="input" size="50" class="display" id="input"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="buttons">
+                    <input class="but" type="button" name="one" value="1" OnClick="calc.input.value += '1'">
+                    <input class="but" type="button" name="two" value="2" OnClick="calc.input.value += '2'">
+                    <input class="but" type="button" name="three" value="3" OnClick="calc.input.value += '3'">
+                    <input class="but" type="button" name="add" value="+" OnClick="calc.input.value += '+'">
+                    <br>
+                    <input class="but" type="button" name="four" value="4" OnClick="calc.input.value += '4'">
+                    <input class="but" type="button" name="five" value="5" OnClick="calc.input.value += '5'">
+                    <input class="but" type="button" name="six" value="6" OnClick="calc.input.value += '6'">
+                    <input class="but" type="button" name="sub" value="-" OnClick="calc.input.value += '-'">
+                    <br>
+                    <input class="but" type="button" name="seven" value="7" OnClick="calc.input.value += '7'">
+                    <input class="but" type="button" name="eight" value="8" OnClick="calc.input.value += '8'">
+                    <input class="but" type="button" name="nine" value="9" OnClick="calc.input.value += '9'">
+                    <input class="but" type="button" name="mul" value="x" OnClick="calc.input.value += '*'">
+                    <br>
+                    <input class="but" type="button" name="clear" value="c" OnClick="calc.input.value = ''">
+                    <input class="but" type="button" name="zero" value="0" OnClick="calc.input.value += '0'">
+                    <input class="but" type="button" name="doit" value="=" OnClick="calc.input.value = eval(calc.input.value)">
+                    <input class="but" type="button" name="div" value="/" OnClick="calc.input.value += '/'">
+                    <br>
+                    <input class="but" type="button" name="div" value="CtoF" OnClick="sub3cf()">
+                    <input class="but" type="button" name="div" value="FtoC" OnClick="sub3fc()">
+                    <input class="but" type="button" name="div" value="GtoOz" OnClick="sub4goz()">
+                    <input class="but" type="button" name="div" value="OztoG" OnClick="sub4ozg()">
+                    <br>
+                    <input class="but" type="button" name="div" value="CmtoI" OnClick="sub4cmi()">
+                    <input class="but" type="button" name="div" value="ItoCm" OnClick="sub4icm()">
+                    </button>
+                </td>
+                
+            </tr>
+        </table>
+    </form>
+    </div>
+ 
+    
+</body>
